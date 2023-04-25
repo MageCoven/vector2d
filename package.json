@@ -1,0 +1,46 @@
+{
+    "name": "vector2d",
+    "version": "0.1.0",
+    "description": "A simple 2D vector library with minimal complexity.",
+    "keywords": [
+        "simple",
+        "vector",
+        "2d",
+        "typescript"
+    ],
+    "main": "lib/",
+    "repository": {
+        "url": "https://github.com/MageCoven/vector2d",
+        "type": "github"
+    },
+    "homepage": "https://github.com/MageCoven/vector2d",
+    "bugs": "https://github.com/MageCoven/vector2d/issues",
+    "author": "MageCoven <casper.lindberg.github@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^29.5.1",
+        "@types/node": "^18.16.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "eslint": "^8.39.0",
+        "eslint-config-prettier": "^8.8.0",
+        "jest": "^29.5.0",
+        "prettier": "^2.8.8",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "format": "prettier --write .",
+        "lint": "eslint src/** --ext .js,.jsx,.ts,.d.ts",
+        "test": "jest",
+        "test:src": "jest src/*",
+        "test:lib": "jest lib/*",
+        "build": "tsc",
+        "build:incremental": "tsc --incremental --tsBuildInfoFile \"./.tsbuildinfo\""
+    },
+    "engines": {
+        "node": "^14.15.0 || ^16.10.0 || >=18.0.0"
+    }
+}

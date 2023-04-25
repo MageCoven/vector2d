@@ -1,0 +1,9 @@
+{
+    "ignorePatterns": ["node_modules/**/*"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ]
+}
+
