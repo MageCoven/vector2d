@@ -1,0 +1,9 @@
+{
+    "entryPoints": ["src/index.ts"],
+    "externalPattern": ["**/node_modules/**"],
+    "excludeExternals": true,
+    "includeVersion": true,
+    "readme": "README.md",
+    "out": "docs",
+    "githubPages": true
+}

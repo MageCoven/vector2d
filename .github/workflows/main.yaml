@@ -34,6 +34,9 @@ jobs:
             - name: Test src
               run: yarn test:src
 
+            - name: Documment
+              run: yarn documment
+
             - name: Build
               run: yarn build
 
