@@ -94,4 +94,56 @@ describe("Vector2", () => {
             },
         );
     });
+
+    describe("Subtracting vector B from A", () => {
+        test("Vector2.sub() passed a Vector2 does not throw an error", () => {
+            expect(() =>
+                new Vector2(0, 0).sub(new Vector2(0, 0)),
+            ).not.toThrow();
+        });
+
+        test("Vector2.sub() passed a non Vector2 throws an error", () => {
+            // @ts-expect-error explicitly testing for type violations
+            expect(() => new Vector2(0, 0).sub("")).toThrow();
+        });
+
+        test("Returns a Vector2", () => {
+            const A = new Vector2(0, 0);
+            const B = new Vector2(1, 1);
+            expect(A.sub(B)).toBeInstanceOf(Vector2);
+        });
+
+        test("Returns A and is thus chainable", () => {
+            const A = new Vector2(0, 0);
+            const B = new Vector2(1, 1);
+            expect(A.sub(B)).toBe(A);
+        });
+
+        test.each([
+            [0, 0, 0, 0, 0, 0],
+            [1, 0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 0, 1],
+            [0, 0, 1, 0, -1, 0],
+            [0, 0, 0, 1, 0, -1],
+            [-1, 0, 0, 0, -1, 0],
+            [0, -1, 0, 0, 0, -1],
+            [0, 0, -1, 0, 1, 0],
+            [0, 0, 0, -1, 0, 1],
+            [1, 0, 1, 0, 0, 0],
+            [0, 1, 0, 1, 0, 0],
+            [1, 0, -1, 0, 2, 0],
+            [0, 1, 0, -1, 0, 2],
+            [-1, 0, 1, 0, -2, 0],
+            [0, -1, 0, 1, 0, -2],
+        ])(
+            "Where A = (%d, %d) and B = (%d, %d) should equal (%d, %d)",
+            (a_x, a_y, b_x, b_y, expected_x, expected_y) => {
+                const A = new Vector2(a_x, a_y);
+                const B = new Vector2(b_x, b_y);
+                A.sub(B);
+                expect(A.x).toBe(expected_x);
+                expect(A.y).toBe(expected_y);
+            },
+        );
+    });
 });
