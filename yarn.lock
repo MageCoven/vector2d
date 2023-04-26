@@ -904,6 +904,11 @@ array-union@^2.1.0:
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
+assert-never@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/assert-never/-/assert-never-1.2.1.tgz#11f0e363bf146205fb08193b5c7b90f4d1cf44fe"
+  integrity sha512-TaTivMB6pYI1kXwrFlEhLeGfOqoDNdTxjCdwRfFFkEA30Eu+k48W34nlok2EYWJfFFzqaEmichdNM7th6M5HNw==
+
 babel-jest@^29.5.0:
   version "29.5.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.5.0.tgz#3fe3ddb109198e78b1c88f9ebdecd5e4fc2f50a5"
@@ -1764,6 +1769,13 @@ jest-cli@^29.5.0:
     jest-validate "^29.5.0"
     prompts "^2.0.1"
     yargs "^17.3.1"
+
+jest-compact-reporter@^1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/jest-compact-reporter/-/jest-compact-reporter-1.2.9.tgz#8dc8aecf08903409b925e2989f3672d67ec30449"
+  integrity sha512-s8SsyiFQu9aniDyZ/t7FAEVxjMzUryHM7e1Leef4DZwyDCNJyGUclREJyvi4cN9yCtu7PSXx3ms47OqpFzUA4w==
+  dependencies:
+    assert-never "^1.2.1"
 
 jest-config@^29.5.0:
   version "29.5.0"
