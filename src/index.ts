@@ -29,6 +29,8 @@ export class Vector2 {
         if (!(other instanceof Vector2))
             throw TypeError("Can only add with a Vector2");
 
-        return new Vector2(this.x + other.x, this.y + other.y);
+        this.x += other.x;
+        this.y += other.y;
+        return this;
     }
 }
