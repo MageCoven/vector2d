@@ -26,7 +26,8 @@ export class Vector2 {
     }
 
     /**
-     * Adds another Vector2 to itself, i.e A.add(B) will add the x and y component of B into A. The function returns a reference to A so it is chainable.
+     * Adds another Vector2 to itself, i.e A.add(B) will add the x and y component of B into A. The
+     * function returns a reference to A so it is chainable.
      * @param other The other Vector2 to add into this.
      * @returns Itself so it can be chained.
      * @example
@@ -53,7 +54,8 @@ export class Vector2 {
     }
 
     /**
-     * Subtracts another Vector2 from itself, i.e A.sub(B) will subtract the x and y component of B into A. The function returns a reference to A so it is chainable.
+     * Subtracts another Vector2 from itself, i.e A.sub(B) will subtract the x and y component of B
+     * into A. The function returns a reference to A so it is chainable.
      * @param other The other Vector2 to subtract from this.
      * @returns Itself so it can be chained.
      * @example
