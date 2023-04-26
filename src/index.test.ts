@@ -61,11 +61,10 @@ describe("Vector2", () => {
             expect(A.add(B)).toBeInstanceOf(Vector2);
         });
 
-        test("Returns a new Vector2", () => {
+        test("Returns A and is thus chainable", () => {
             const A = new Vector2(0, 0);
             const B = new Vector2(1, 1);
-            expect(A.add(B)).not.toBe(A);
-            expect(A.add(B)).not.toBe(B);
+            expect(A.add(B)).toBe(A);
         });
 
         test.each([
@@ -86,12 +85,12 @@ describe("Vector2", () => {
             [0, -1, 0, 1, 0, 0],
         ])(
             "Where A = (%d, %d) and B = (%d, %d) should equal (%d, %d)",
-            (a, b, c, d, e, f) => {
-                const A = new Vector2(a, b);
-                const B = new Vector2(c, d);
-                const C = new Vector2(e, f);
-                expect(A.add(B).x).toBe(C.x);
-                expect(A.add(B).y).toBe(C.y);
+            (a_x, a_y, b_x, b_y, expected_x, expected_y) => {
+                const A = new Vector2(a_x, a_y);
+                const B = new Vector2(b_x, b_y);
+                A.add(B);
+                expect(A.x).toBe(expected_x);
+                expect(A.y).toBe(expected_y);
             },
         );
     });
