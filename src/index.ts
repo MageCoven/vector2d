@@ -51,4 +51,31 @@ export class Vector2 {
         this.y += other.y;
         return this;
     }
+
+    /**
+     * Subtracts another Vector2 from itself, i.e A.sub(B) will subtract the x and y component of B into A. The function returns a reference to A so it is chainable.
+     * @param other The other Vector2 to subtract from this.
+     * @returns Itself so it can be chained.
+     * @example
+     * ```
+     * const A = new Vector2(0, 0);
+     * A.sub(new Vector2(1, 0));
+     * // A = (-1, 0)
+     * ```
+     *
+     * The function is chainable as it returns a reference to the class instance.
+     * ```
+     * const A = new Vector2(0, 0);
+     * A.sub(new Vector2(1, 0)).add(new Vector2(0, 1));
+     * // A = (-1, 1)
+     * ```
+     */
+    sub(other: Vector2): Vector2 {
+        if (!(other instanceof Vector2))
+            throw TypeError("Can only add with a Vector2");
+
+        this.x -= other.x;
+        this.y -= other.y;
+        return this;
+    }
 }
