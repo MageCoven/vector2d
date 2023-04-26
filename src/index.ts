@@ -25,6 +25,24 @@ export class Vector2 {
         this.y = y;
     }
 
+    /**
+     * Adds another Vector2 to itself, i.e A.add(B) will add the x and y component of B into A. The function returns a reference to A so it is chainable.
+     * @param other The other Vector2 to add into this.
+     * @returns Itself so it can be chained.
+     * @example
+     * ```
+     * const A = new Vector2(0, 0);
+     * A.add(new Vector2(1, 0));
+     * // A = (1, 0)
+     * ```
+     *
+     * The function is chainable as it returns a reference to the class instance.
+     * ```
+     * const A = new Vector2(0, 0);
+     * A.add(new Vector2(1, 0)).add(new Vector2(0, 1));
+     * // A = (1, 1)
+     * ```
+     */
     add(other: Vector2): Vector2 {
         if (!(other instanceof Vector2))
             throw TypeError("Can only add with a Vector2");
